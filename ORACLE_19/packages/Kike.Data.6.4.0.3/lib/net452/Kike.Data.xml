@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kike.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Kike.Data.Attributes.SequenceValueAttribute">
+            <summary>
+            Marca uma propriedade como tendo seu valor preenchido por uma sequence
+            Usa o formato S_NOMEPROPRIEDADE para obter a sequence ou o nome da sequence informado.
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Attributes.SequenceValueAttribute.SequenceName">
+            <summary>
+            O nome da sequence
+            </summary>
+        </member>
+        <member name="T:Kike.Data.Contracts.IKikeContext`1">
+            <summary>
+            Generic Interface to Context Implementation
+            </summary>
+            <typeparam name="TKikeDataContext"></typeparam>
+        </member>
+        <member name="M:Kike.Data.Contracts.IKikeContext`1.Save">
+            <summary>
+            Basr Save Changes Method, can used overriding base SaveChanges()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Kike.Data.Contracts.IKikeRepositoryBase`1">
+            <summary>
+            Interface to sign repository to use without exclusive Entity
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Contracts.IUnitOfWorkBase.transaction">
+            <summary>
+            Get trasaction
+            </summary>
+        </member>
+        <member name="M:Kike.Data.Contracts.IUnitOfWorkBase.Commit">
+            <summary>
+            Apply all changes to repositories
+            </summary>
+        </member>
+        <member name="M:Kike.Data.Contracts.IUnitOfWorkBase.Rollback">
+            <summary>
+            Undoes changes to repositories
+            </summary>
+        </member>
+        <member name="T:Kike.Data.Contracts.UnitOfWorkBase`1">
+            <summary>
+            Class generic to Implement UnitOfWork
+            </summary>
+            <typeparam name="TIContext">Interface of your context </typeparam>
+        </member>
+        <member name="M:Kike.Data.Contracts.UnitOfWorkBase`1.Initialize(`0,System.Boolean)">
+            <summary>
+            Use with database
+            </summary>
+            <param name="context">Current context</param>
+            <param name="isMockTransaction">false when using a context of real database and true when use a context mock</param>
+        </member>
+        <member name="P:Kike.Data.Contracts.UnitOfWorkBase`1.transaction">
+            <summary>
+            Return current transaction
+            </summary> 
+        </member>
+        <member name="M:Kike.Data.Contracts.UnitOfWorkBase`1.Commit">
+            <summary>
+            Commit the current transaction
+            </summary>
+        </member>
+        <member name="M:Kike.Data.Contracts.UnitOfWorkBase`1.Rollback">
+            <summary>
+            Rollback the current transaction
+            </summary>
+        </member>
+        <member name="M:Kike.Data.Contracts.UnitOfWorkBase`1.Dispose">
+            <summary>
+            Dispose current context and Context
+            </summary>
+        </member>
+        <member name="T:Kike.Data.Helpers.ConfigurationHelper">
+            <summary>
+            Kike Implementation to Consinco.Framework.Helper.ConfiguracaoHelper
+            </summary>
+        </member>
+        <member name="T:Kike.Data.Helpers.EntitiesHelper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Kike.Data.Helpers.EntitiesHelper.ReturnKeys(System.Object)">
+            <summary>
+            Retorna as propriedades que representam as chaves da entidade
+            </summary>
+            <param name="entity">A entidade a ser analisada</param>
+            <returns>Um <see cref="T:System.Collections.Generic.IEnumerable`1"/> contendo os nomes das propriedades que representam a(s) chave(s) da entidade</returns>
+        </member>
+        <member name="T:Kike.Data.KikeRepositoryBase">
+            <summary>
+            Implements default base bindings to use without exclusive Entity
+            </summary>
+        </member>
+        <member name="M:Kike.Data.KikeRepositoryBase.Dispose">
+            <summary>
+            Implementation of IDisposable.
+            </summary>
+        </member>
+        <member name="T:Kike.Data.RepositoryBase`2">
+            <summary>
+            Classe base para reposiotórios de acesso a dados
+            </summary>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.GetAll">
+            <summary>
+            Retorna todas os registros da entidade informada
+            </summary>
+            <returns>Um <see cref="T:System.Linq.IQueryable`1"/> da entidade</returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.GetByKey(System.Int32)">
+            <summary>
+            Retorna uma entidade baseado no seu Seq
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Obtém entidades do banco baseado nas condições passadas como parâmetro
+            </summary>
+            <param name="filter"></param>
+            <param name="orderBy"></param>
+            <param name="includes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Save(`0)">
+            <summary>
+            Salva a entidade no banco. Faz "INSERT" ou "UPDATE" de acordo com a necessidade
+            </summary>
+            <param name="entity">A entidade a ser salva no banco</param>
+            <returns>A própria entidade</returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Delete(`0)">
+            <summary>
+            Exclui a entidade do banco
+            </summary>
+            <param name="entity">a entidade a ser excluída</param>
+            <returns>True se conseguiu excluir ou False caso contrário</returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Create(`0)">
+            <summary>
+            Insere a entidade no banco de dados
+            </summary>
+            <param name="entity">A entidade a ser inserida no banco</param>
+            <returns>A entidade inserida</returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Update(`0)">
+            <summary>
+            Método usado para atualizar a entidade no banco de dados
+            </summary>
+            <param name="entity">A entidade a ser atualizada</param>
+            <returns>Retorna a própria entidade se conseguir atualziar, caso contrário, nulo</returns>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Dispose">
+            <summary>
+            Finaliza a classe
+            </summary>
+        </member>
+        <member name="M:Kike.Data.RepositoryBase`2.Dispose(System.Boolean)">
+            <summary>
+            Finaliza a classe
+            </summary>
+            <param name="disposing"></param>
+        </member>
+    </members>
+</doc>

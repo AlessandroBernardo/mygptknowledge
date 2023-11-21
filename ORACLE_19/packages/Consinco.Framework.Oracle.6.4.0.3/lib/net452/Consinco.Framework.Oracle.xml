@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Consinco.Framework.Oracle</name>
+    </assembly>
+    <members>
+        <member name="T:Consinco.Framework.Oracle.ConsincoParameter">
+            <summary>
+            Classe que contém o parâmetro passado para o banco.
+            Ela é usada para manter a informação de um tipo de retorno de parâmteros refCursor, por exemplo
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.ConsincoParameter.Parameter">
+            <summary>
+            Parâmetro que vai para o Oracle
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.ConsincoParameter.Entity">
+            <summary>
+            Informação do tipo da entidade de retorno caso o parâmetro necessite ser mapeado de volta
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.ConsincoParameter.Value">
+            <summary>
+            Atalho para Parameter.Value
+            </summary>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.ConsincoParameter.CreateInputOutputVarcharParameter(System.String,System.String)">
+            <summary>
+            Parametro varchar de input/output tem uma característica especial. Esse método supre essa necessidade
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.ConsincoParameter.CreateVarcharParameter(System.String,System.String)">
+            <summary>
+            Parametro varchar tem uma característica especial. Esse método supre essa necessidade
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.ConsincoParameter.CreateOutputParameter(System.String,Oracle.ManagedDataAccess.Client.OracleDbType,System.Object)">
+            <summary>
+            Criar um parâmetro output
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.ConsincoParameter.CreateOutputParameter(System.String,Oracle.ManagedDataAccess.Client.OracleDbType)">
+            <summary>
+            Criar um parâmetro output
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.ConsincoParameter.CreateRefCursorParameter(System.String,System.Type)">
+            <summary>
+            Cria um parâmetro output que retorna um cursor preenchido no tipo pasado em entityType
+            </summary>
+            <param name="name"></param>
+            <param name="entityType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.RepositorioBase`1.AdicionaObjetos``1(System.Data.Entity.DbSet{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            insere uma lista de objetos utilizando o entityFramework
+            </summary>
+            <typeparam name="T">tipo da entidade</typeparam>
+            <param name="dbSet">dbSet</param>
+            <param name="entities">lista de entidades</param>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.RepositorioBase`1.AdicionaObjetosAsync``1(System.Data.Entity.DbSet{``0},System.Collections.Generic.List{``0},System.Threading.CancellationToken)">
+            <summary>
+            insere uma lista de objetos utilizando o entityFramework
+            </summary>
+            <typeparam name="T">tipo da entidade</typeparam>
+            <param name="dbSet">dbSet</param>
+            <param name="entities">lista de entidades</param>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.RepositorioBase`1.AdicionaObjetos``1(System.Collections.Generic.List{``0})">
+            <summary>
+            insere uma lista de objetos utilizando OracleCommand, o que faz com que o insert seja mais rápido em relação ao entityFramework
+            </summary>
+            <typeparam name="T">tipo de entidade</typeparam>
+            <param name="entities">Lista de entidades</param>
+        </member>
+        <member name="M:Consinco.Framework.Oracle.RepositorioBase`1.AdicionaObjetosAsync``1(System.Collections.Generic.List{``0},System.Threading.CancellationToken)">
+            <summary>
+            insere uma lista de objetos utilizando OracleCommand, o que faz com que o insert seja mais rápido em relação ao entityFramework
+            </summary>
+            <typeparam name="T">tipo de entidade</typeparam>
+            <param name="entities">Lista de entidades</param>
+        </member>
+        <member name="T:Consinco.Framework.Oracle.Resources.ConsincoOracleContextResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.ConsincoOracleContextResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.ConsincoOracleContextResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.ConsincoOracleContextResources.ChangedFrom">
+            <summary>
+              Looks up a localized string similar to mudou de.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.ConsincoOracleContextResources.Fonte">
+            <summary>
+              Looks up a localized string similar to Fonte.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.ConsincoOracleContextResources.Para">
+            <summary>
+              Looks up a localized string similar to to.
+            </summary>
+        </member>
+        <member name="T:Consinco.Framework.Oracle.Resources.RepositorioBaseResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.RepositorioBaseResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.RepositorioBaseResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Oracle.Resources.RepositorioBaseResources.PrimaryKeyViolated">
+            <summary>
+              Looks up a localized string similar to Já existe um objeto com esta chave primária..
+            </summary>
+        </member>
+    </members>
+</doc>

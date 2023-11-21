@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kike</name>
+    </assembly>
+    <members>
+        <member name="M:Kike.Data.Contracts.IRepository`1.GetAll">
+            <summary>
+            Retorna todas os registros da entidade informada
+            </summary>
+            <returns>Um <see cref="T:System.Linq.IQueryable`1"/> da entidade</returns>
+        </member>
+        <member name="M:Kike.Data.Contracts.IRepository`1.GetByKey(System.Int32)">
+            <summary>
+            Retorna uma entidade baseado no seu Seq
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kike.Data.Contracts.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Obt�m entidades do banco baseado nas condi��es passadas como par�metro
+            </summary>
+            <param name="filter"></param>
+            <param name="orderBy"></param>
+            <param name="includes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kike.Data.Contracts.IRepository`1.Save(`0)">
+            <summary>
+            Salva a entidade no banco. Faz "INSERT" ou "UPDATE" de acordo com a necessidade
+            </summary>
+            <param name="entity">A entidade a ser salva no banco</param>
+            <returns>A pr�pria entidade</returns>
+        </member>
+        <member name="M:Kike.Data.Contracts.IRepository`1.Delete(`0)">
+            <summary>
+            Exclui a entidade do banco
+            </summary>
+            <param name="entity">a entidade a ser exclu�da</param>
+            <returns>True se conseguiu excluir ou False caso contr�rio</returns>
+        </member>
+        <member name="M:Kike.Data.Contracts.IRepository`1.Dispose">
+            <summary>
+            Finaliza a classe
+            </summary>
+        </member>
+        <member name="M:Kike.Helpers.AESHelper.EncryptStringAES(System.String,System.String,System.String)">
+            <summary>
+            Criptogtrafa uma string usando AES
+            </summary>
+            <param name="plainText">O texto a ser encriptado</param>
+            <param name="sharedSecret">A chave de segredo a ser usada para encriptação</param>
+            <param name="salt">A chave 'salt' a ser usada para encriptação</param>
+            <returns>A string encriptada</returns>
+        </member>
+        <member name="M:Kike.Helpers.AESHelper.DecryptStringAES(System.String,System.String,System.String)">
+            <summary>
+            Decripta uma string encriptada com AES
+            </summary>
+            <param name="cipherText">O texto encriptado</param>
+            <param name="sharedSecret">A chave de segredo a ser usada para decriptação (deve ser a mesma usada para encriptação)</param>
+            <param name="salt">A chave 'salt' a ser usada para decriptação (deve ser a mesma usada para encriptação)</param>
+            <returns>A string decriptada</returns>
+        </member>
+        <member name="T:Kike.Helpers.C5Crypto">
+            <summary>
+            Classe the criptografia baseada no algoritmo da PKG_C5_SEGURANCA
+            </summary>
+        </member>
+        <member name="M:Kike.Helpers.C5Crypto.Decode(System.String)">
+            <summary>
+            Decodifica uma string codificada por essa mesma classe
+            </summary>
+            <param name="text">String codificada para decodificar</param>
+            <returns>A string decodificada</returns>
+        </member>
+        <member name="M:Kike.Helpers.C5Crypto.DecodeAsync(System.String)">
+            <summary>
+            Decodifica uma string codificada por essa mesma classe de maneira assíncrona
+            </summary>
+            <param name="text">String codificada para decodificar</param>
+            <returns>Uma Task contendo a execução da decodificação</returns>
+        </member>
+        <member name="M:Kike.Helpers.C5Crypto.Encode(System.String)">
+            <summary>
+            Encode string value
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kike.Helpers.C5Crypto.EncodeAsync(System.String)">
+            <summary>
+            Syncronous Encoding of a string value
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.CryptoAES(System.Int32@,System.String,System.String)">
+            <summary>
+            Criptografa a string no padrão Rijndael
+            </summary>
+            <param name="result">O retorno de sucesso ou falha na execuçao</param>
+            <param name="text">O texto de entrada para descriptografar</param>
+            <param name="key">A chave utilizada na descriptografia (8, 16, 24 ou 32 caracteres)</param>
+            <returns>O valor criptografado no padrao Rijndael</returns>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.DecryptoAES(System.Int32@,System.String,System.String)">
+            <summary>
+            Descriptografa a string no padrao Rijndael
+            </summary>
+            <param name="result">O retorno de sucesso ou falha na execuçao</param>
+            <param name="text">O texto de entrada para descriptografar</param>
+            <param name="key">A chave utilizada na descriptografia (8, 16, 24 ou 32 caracteres)</param>
+            <returns>O hash gerado pela string</returns>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.GetSHA256(System.Int32@,System.String)">
+            <summary>
+            Retorna um hash no padrão SHA256
+            </summary>
+            <param name="result">O retorno de sucesso ou falha na execuçao</param>
+            <param name="text">O texto de entrada para gerar o hash</param>
+            <returns>O hash gerado pela string</returns>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.GetMD5Hash(System.Int32@,System.String)">
+            <summary>
+            Retorna um hash no padrão MD5
+            </summary>
+            <param name="result">O retorno de sucesso ou falha na execuçao</param>
+            <param name="input">O valor de entrada para gerar o hash</param>
+            <returns>O hash gerado pela string</returns>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.GetCRC32(System.Int32@,System.String)">
+            <summary>
+            Retorna um hash no padrão CRC32
+            </summary>
+            <param name="result">O retorno de sucesso ou falha na execuçao</param>
+            <param name="input">O valor de entrada para gerar o hash</param>
+            <returns>O hash gerado pela string</returns>
+        </member>
+        <member name="F:Kike.Helpers.Cryptography.Crc32.s_generator">
+            <summary>
+            Generator polynomial (modulo 2) for the reversed CRC32 algorithm. 
+            </summary>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.Crc32.#ctor">
+            <summary>
+            Creates a new instance of the Crc32 class.
+            </summary>
+        </member>
+        <member name="M:Kike.Helpers.Cryptography.Crc32.Get``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Calculates the checksum of the byte stream.
+            </summary>
+            <param name="byteStream">The byte stream to calculate the checksum for.</param>
+            <returns>A 32-bit reversed checksum.</returns>
+        </member>
+        <member name="F:Kike.Helpers.Cryptography.Crc32.m_checksumTable">
+            <summary>
+            Contains a cache of calculated checksum chunks.
+            </summary>
+        </member>
+        <member name="T:Kike.Reflection.ReflectionHelper">
+            <summary>
+            Classe com extensões, chamadas auxiliares e cache de reflection
+            </summary>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.CreateNew``1">
+            <summary>
+            Cria uma nova instância do tipo usando o construtor padrão
+            </summary>
+            <typeparam name="T">Tipo a ser criado</typeparam>
+            <returns>Uma instância do tipo</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetPropertyByName(System.Type,System.String)">
+            <summary>
+            Retorna uma propriedade do tipo pelo seu nome
+            </summary>
+            <param name="type">Tipo a ter sua propriedade retornada</param>
+            <param name="name">Nome da propriedade</param>
+            <returns>Um <see cref="T:System.Reflection.PropertyInfo"/> da propriedade</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetAllProperties(System.Type)">
+            <summary>
+            Retorna as propriedades de um tipo.
+            As propriedades aqui retornadas são obtidas apenas uma vez e guardads em cache
+            </summary>
+            <param name="type">O tipo a ter suas propriedades obtidas</param>
+            <returns>Um array de <see cref="T:System.Reflection.PropertyInfo"/></returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Retorna o valor da propriedade de um objeto
+            </summary>
+            <param name="pInfo">O <see cref="T:System.Reflection.PropertyInfo"/> que descreve a propriedade</param>
+            <param name="instance">Uma instância do objeto contento a propriedade</param>
+            <returns>o valor da propriedade</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetPropertyValue``1(System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+             Retorna o valor da propriedade de um objeto
+            </summary>
+            <typeparam name="T">O tipo da propriedade</typeparam>
+            <param name="pInfo">O <see cref="T:System.Reflection.PropertyInfo"/> que descreve a propriedade</param>
+            <param name="instance">Uma instância do objeto contento a propriedade</param>
+            <returns>o valor da propriedade</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object)">
+            <summary>
+            Define o valor da propriedade na instância passada
+            </summary>
+            <param name="pInfo">O <see cref="T:System.Reflection.PropertyInfo"/> que descreve a propriedade</param>
+            <param name="value">O valor a ser colocado na propriedade</param>
+            <param name="instance">Uma instância do objeto contento a propriedade</param>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetAllAttributes(System.Reflection.PropertyInfo)">
+            <summary>
+            Retorna todos os atributos de uma propriedade
+            </summary>
+            <param name="pInfo">A propriedade a ser aferida</param>
+            <returns>Todos os atributos da propriedade</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetAttribute``1(System.Reflection.PropertyInfo)">
+            <summary>
+            Retorna o atributo da propriedade
+            </summary>
+            <typeparam name="T">O tipo do atributo a ser retornado</typeparam>
+            <param name="pInfo">A propriedade a ser aferida</param>
+            <returns>Uma instância do atributo</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetAllAttributes(System.Type)">
+            <summary>
+            Retorna todos os atributos de um tipo
+            </summary>
+            <param name="t">O tipo a ser aferido</param>
+            <returns>Todos os atributos do tipo</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetAttribute``1(System.Type)">
+            <summary>
+            Retorna o atributo do tipo
+            </summary>
+            <typeparam name="T">O tipo do atributo a ser retornado</typeparam>
+            <param name="t">A tipo a ser aferido</param>
+            <returns>Uma instância do atributo</returns>
+        </member>
+        <member name="M:Kike.Reflection.ReflectionHelper.GetPrivateValue(System.Type,System.Object,System.String,System.Boolean)">
+            <summary>
+            Retorna o valor de uma propriedade ou campo privado de uma classe
+            </summary>
+            <param name="type">O tipo do objeto</param>
+            <param name="instance">A instancia do objeto</param>
+            <param name="objName">O nome do campo ou propriedade</param>
+            <param name="isProperty">Indica se é uma propriedade. Se nao for, considera campo</param>
+            <returns>Um objeto com o valor</returns>
+        </member>
+        <member name="T:Kike.TNS.TNSFinder">
+            <summary>
+            Classe para encontrar o arquivo tnsnames.ora
+            </summary>
+        </member>
+        <member name="M:Kike.TNS.TNSFinder.DiscoveryTNSPath">
+            <summary>
+            Encontra o caminho do arquivo tnsnames.ora da instalação padrão do client Oracle
+            </summary>
+            <returns>O caminho do arquivo tnsnames.ora ou uma exceção</returns>
+        </member>
+        <member name="T:Kike.TNS.TNSParser">
+            <summary>
+            Classe que interpreta o conteúdo do arquivo tnsnames.ora
+            </summary>
+        </member>
+        <member name="M:Kike.TNS.TNSParser.ParseFile(System.String)">
+            <summary>
+            Interpreta o cconteúdo do arquivo tnsnames.ora e gera um dicionário com as entradas
+            </summary>
+            <param name="file">Caminho para o arquivo tnsnames.ora</param>
+            <returns>Um dicionário que possui o nome do TNS como chave e o datasource como valor</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kike.Data.Oracle</name>
+    </assembly>
+    <members>
+        <member name="T:Kike.Data.Oracle.Helpers.ConnectionStringValues">
+            <summary>
+            Valores da connection string
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Oracle.Helpers.ConnectionStringValues.UserID">
+            <summary>
+            Usuário de acesso ao banco
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Oracle.Helpers.ConnectionStringValues.Password">
+            <summary>
+            Senha de acesso ao banco
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Oracle.Helpers.ConnectionStringValues.DataSource">
+            <summary>
+            Nome do TNS ou string de TNS
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Oracle.Helpers.ConnectionStringValues.ServiceName">
+            <summary>
+            Nome do serviço do banco
+            </summary>
+        </member>
+        <member name="P:Kike.Data.Oracle.Helpers.ConnectionStringValues.PersistSecurityInfo">
+            <summary>
+            Valor que indica se a flag PersistSecurityInfo está ativa ou não
+            </summary>
+        </member>
+        <member name="T:Kike.Data.Oracle.Helpers.ConnectionStringHelper">
+            <summary>
+            Classe que auxilia operações com a connection string
+            </summary>
+        </member>
+        <member name="M:Kike.Data.Oracle.Helpers.ConnectionStringHelper.DecriptaConnectionString(System.String)">
+            <summary>
+            Decripta a senha da connection string para ser usada na conexão
+            </summary>
+            <param name="connectionString">Connection string encriptada</param>
+            <returns>Connection string decriptada</returns>
+        </member>
+        <member name="M:Kike.Data.Oracle.Helpers.ConnectionStringHelper.ParseConnectionString(System.String)">
+            <summary>
+            Interpreta a connections string e retorna seus valores separadamente
+            </summary>
+            <param name="connectionString">A connection string a ser interpretada</param>
+            <returns>Retorna um objeto <see cref="T:Kike.Data.Oracle.Helpers.ConnectionStringValues"/> contendo os valores da connetion string</returns>
+        </member>
+        <member name="M:Kike.Data.Oracle.KikeOracleDataContext.#ctor">
+            <summary>
+            Construtor padrão que utiliza a connection string ConsincoConnectionString (do arquivo de configuração) para efetuar a conexão
+            </summary>
+        </member>
+        <member name="M:Kike.Data.Oracle.KikeOracleDataContext.#ctor(System.String)">
+            <summary>
+            Construtor que recebe uma connection string ou um nome de connection string do arquivo de configuração
+            </summary>
+            <param name="nameOrConnectionString">Connection string ou o nome da connection string no arquivo de configuração</param>
+        </member>
+    </members>
+</doc>

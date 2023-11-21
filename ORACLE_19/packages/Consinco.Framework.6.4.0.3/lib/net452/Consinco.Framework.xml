@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Consinco.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Consinco.Framework.Currency.Resources.CurrencyValidations">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Currency.Resources.CurrencyValidations.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Currency.Resources.CurrencyValidations.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Currency.Resources.CurrencyValidations.ValueRequired">
+            <summary>
+              Looks up a localized string similar to Este campo é obrigatório..
+            </summary>
+        </member>
+        <member name="T:Consinco.Framework.Helpers.ZipHelper">
+            <summary>
+            Classe que auxilia a compressão e descompressão de arquivos
+            </summary>
+        </member>
+        <member name="T:Consinco.Framework.Resources.MensagensResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.AplicacoesParaMenu">
+            <summary>
+              Looks up a localized string similar to Aplicações para menu atualizadas com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.AtualizadoComSucesso">
+            <summary>
+              Looks up a localized string similar to Cadastro atualizado com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.AvisoParaPesquisa">
+            <summary>
+              Looks up a localized string similar to Para pesquisar, click no ícone de pesquisa acima..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.CadastradoComSucesso">
+            <summary>
+              Looks up a localized string similar to Cadastro efetuado com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.ErroCadastroDocumentacao">
+            <summary>
+              Looks up a localized string similar to Erro ao salvar documentação!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.ErroDocumentacaoContextual">
+            <summary>
+              Looks up a localized string similar to Erro ao carregar documentação contextual!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.ErroGeral">
+            <summary>
+              Looks up a localized string similar to Ocorreu um erro inesperado ao efetuar a operação. Por favor, contate o administrador se o erro persistir..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.ExcluidoComSucesso">
+            <summary>
+              Looks up a localized string similar to Cadastro excluído com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.MenuAtualizado">
+            <summary>
+              Looks up a localized string similar to Menu atualizado com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.MenuCadastrado">
+            <summary>
+              Looks up a localized string similar to Menu adicionado com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.MenuExcluido">
+            <summary>
+              Looks up a localized string similar to Menu excluído com sucesso!.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.MenuNaoAlterado">
+            <summary>
+              Looks up a localized string similar to Não foi possível editar menu.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.MenuNaoExcluido">
+            <summary>
+              Looks up a localized string similar to Não foi possível excluír menu.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.MenuNaoInserido">
+            <summary>
+              Looks up a localized string similar to Não foi possível inserir menu.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Resources.MensagensResources.SucessoCadastroDocumentacao">
+            <summary>
+              Looks up a localized string similar to Documentação salva com sucesso!.
+            </summary>
+        </member>
+        <member name="T:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ValicaoIP">
+            <summary>
+              Looks up a localized string similar to O formato do IP está incorreto..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ValidacaoData">
+            <summary>
+              Looks up a localized string similar to O formato da data está incorreto..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ValidacaoEmail">
+            <summary>
+              Looks up a localized string similar to O formato do e-mail está incorreto..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ValidacaoNumeroDecimal">
+            <summary>
+              Looks up a localized string similar to Este campo deve ser um número decimal..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ValidacaoNumeroInteiro">
+            <summary>
+              Looks up a localized string similar to Este campo deve ser um número inteiro..
+            </summary>
+        </member>
+        <member name="P:Consinco.Framework.Validacoes.Traducoes.MensagensValidacoesResources.ValidacaoURL">
+            <summary>
+              Looks up a localized string similar to O formato da URL está incorreto..
+            </summary>
+        </member>
+    </members>
+</doc>
